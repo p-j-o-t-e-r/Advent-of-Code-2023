@@ -6,6 +6,15 @@ static const unsigned r_len = 3;
 static const unsigned g_len = 5;
 static const unsigned b_len = 4;
 
+// function clearing the number;
+void clear(char *number)
+{
+    number[0]=0;
+    number[1]=0;
+    number[2]=0;
+}
+
+
 int main()
 {
     FILE *file;
@@ -28,9 +37,7 @@ int main()
             {
             case ':':
                 n_ind = 0;
-                number[0] = 0;
-                number[1] = 0;
-                number[2] = 0;
+                clear(number);
                 break;
             case ' ':
                 if(n_ind != 0)
@@ -63,9 +70,7 @@ int main()
                         i+=r_len;
                         space=false;
                         n_ind = 0;
-                        number[0] = 0;
-                        number[1] = 0;
-                        number[2] = 0;
+                        clear(number);
                         break;
                     case 'g':
                         sscanf(number, "%u", &nr);
@@ -76,9 +81,7 @@ int main()
                         i+=g_len;
                         space=false;
                         n_ind = 0;
-                        number[0] = 0;
-                        number[1] = 0;
-                        number[2] = 0;
+                        clear(number);
                         break;
                     case 'b':
                         sscanf(number, "%u", &nr);
@@ -89,9 +92,7 @@ int main()
                         i+=b_len;
                         space=false;
                         n_ind = 0;
-                        number[0] = 0;
-                        number[1] = 0;
-                        number[2] = 0;
+                        clear(number);
                         break;
                     default:
                         break;
