@@ -105,7 +105,6 @@ int main()
                         break;
                     }
                 }
-            
             }
         }
         if(!br)
